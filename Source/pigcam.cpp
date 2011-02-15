@@ -184,6 +184,10 @@ void PigCamService::DoTranslation( twm::Vector destination, twm::Vector angle, f
 	_isTranslating = true;
 }
 
+
+//BEZIER... POINT ONE AT KEY FRAME POS, POINT TWO AND INTREST...
+//TANGENT OF BEZIER IS = TO LOOK AT.
+
 twm::Vector PigCamService::getLookAtVec( twm::Vector position, twm::Vector lookat )
 {
 	twm::Vector Vector;

@@ -151,4 +151,19 @@ namespace ASPX
 		}
 	}
 
+	namespace Path
+	{
+		twm::Matrix Frenet( const twm::Vector& pos, const twm::Vector& dir, const twm::Vector& up )
+		{
+			const twm::Vector W = twm::Unit( dir );
+			const twm::Vector U = twm::Cross( up, W );
+			const twm::Vector V = twm::Cross( U, W );
+
+			return twm::Matrix( U.x,	U.y,	U.z,	0,
+								V.x,	V.y,	V.z,	0,
+								W.x,	W.y,	W.z,	0,
+								pos.x,	pos.y,	pos.z,	1 );
+		}
+	}
+
 }

@@ -64,4 +64,9 @@ namespace ASPX
 			bool update( twm::Vector &vector, float time );
 		};
 	}
+
+	namespace Path
+	{
+		twm::Matrix Frenet( const twm::Vector& pos, const twm::Vector& dir, const twm::Vector& up );
+	}
 }
